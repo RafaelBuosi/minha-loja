@@ -1,0 +1,36 @@
+<div class="card shadow-sm border-0 h-100">
+  <div class="card-body">
+    <h5 class="text-success mb-3">Cadastrar Produto</h5>
+    
+    <div class="mb-3">
+      <label class="form-label small fw-bold text-secondary">Nome do Produto</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-tag"></i></span>
+        <input type="text" [(ngModel)]="produtoNome" class="form-control" placeholder="Ex: Teclado">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label small fw-bold text-secondary">Preço Unitário</label>
+      <div class="input-group">
+        <span class="input-group-text">R$</span>
+        <input type="number" [(ngModel)]="produtoPreco" class="form-control">
+      </div>
+    </div>
+
+    <button [disabled]="!produtoNome" (click)="salvar()" class="btn btn-success w-100 py-2 fw-bold">
+      Salvar Produto
+    </button>
+
+    <div class="mt-4">
+      <h6 class="small fw-bold text-secondary border-bottom pb-2">Itens Cadastrados</h6>
+      <ul class="list-group list-group-flush small">
+        @for (p of listaProdutos(); track p.id) {
+          <li class="list-group-item d-flex justify-content-between px-0" [class.caro]="p.preco > 500">
+            {{ p.nome }} <span>{{ p.preco | currency:'BRL' }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

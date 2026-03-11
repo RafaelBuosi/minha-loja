@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bs-primary: #198754;
+}
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.logo-loja {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .logo-loja {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #2b3035;
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .input-group-text {
+  background-color: #343a40;
+  color: #adb5bd;
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .list-group-item {
+  background-color: transparent;
+  color: #adb5bd;
+}
+
+.caro {
+  color: #dc3545 !important;
+  font-weight: bold;
+}

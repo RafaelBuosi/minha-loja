@@ -1,0 +1,21 @@
+<app-header [estaEscuro]="darkMode()" (trocarTema)="toggleTheme()"></app-header>
+
+<main class="container my-5">
+  <h1 class="display-5 fw-bold text-success mb-4 text-center text-md-start">Produtos</h1>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <app-formulario-produto></app-formulario-produto>
+    </div>
+
+    <div class="col-md-8">
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+        <div class="col"><app-card-produto nome="Notebook" [preco]="4500"></app-card-produto></div>
+        <div class="col"><app-card-produto nome="Mouse" [preco]="150"></app-card-produto></div>
+        <div class="col"><app-card-produto nome="Monitor" [preco]="2200" [disponivel]="false"></app-card-produto></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,14 @@
+<div class="card shadow-sm h-100 border-0 bg-body-tertiary">
+  <div class="card-body">
+    <h5 class="card-title text-success">{{ nome() }}</h5>
+    <h6 class="card-subtitle mb-3">{{ preco() | currency:'BRL' }}</h6>
+    <p>
+      <span [class]="disponivel() ? 'badge bg-success' : 'badge bg-danger'">
+        {{ disponivel() ? 'Em estoque' : 'Indisponivel' }}
+      </span>
+    </p>
+    <button class="btn btn-outline-success btn-sm w-100" (click)="comprar.emit(nome())">
+      Comprar
+    </button>
+  </div>
+</div>
