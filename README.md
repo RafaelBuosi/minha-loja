@@ -1,59 +1,42 @@
-# MinhaLoja
+# 🛒 MinhaLoja - Angular 21
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
+Uma interface de loja moderna desenvolvida como parte de um estudo acadêmico com Angular. O projeto foca em componentes reutilizáveis, gerenciamento de estado reativo com **Signals** e uma experiência de usuário fluida com suporte nativo a **Modo Escuro**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+* **Angular 21**: Framework principal utilizando componentes Standalone.
+* **Bootstrap 5.3**: Estilização e sistema de grid responsivo.
+* **Bootstrap Icons**: Biblioteca de ícones.
+* **Signals API**: Gerenciamento de estado moderno para inputs e reatividade.
+* **TypeScript**: Lógica de programação tipada.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Funcionalidades Implementadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 1. Gestão de Produtos (Cards)
+* Componentização de itens de vitrine utilizando `@Input` reativos.
+* Tratamento de disponibilidade (estoque) com lógica visual dinâmica.
+* Ciclo de vida de componentes (`ngOnInit`) para monitoramento de instâncias.
 
-```bash
-ng generate component component-name
-```
+### 2. Cadastro Dinâmico
+* Formulário com **Two-way Data Binding** (`[(ngModel)]`).
+* Validação simples de interface (Botão salvar habilitado apenas com dados válidos).
+* Lista de produtos em tempo real utilizando a diretiva `@for`.
+* Formatação de moeda brasileira com `CurrencyPipe`.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 3. Interface Adaptável (Dark Mode)
+* Sistema de troca de tema (Claro/Escuro) integrado ao Bootstrap 5.3.
+* Persistência visual através de **Signals** e **Effects**.
+* Logotipo e ícones reativos que mudam de cor e forma conforme o tema escolhido.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 📦 Como executar o projeto
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Certifique-se de ter o [Node.js](https://nodejs.org/) e o [Angular CLI](https://angular.io/cli) instalados.
+2. Clone o repositório:
+   ```bash
+   git clone [https://github.com/rafaelbuosijardim/minha-loja.git](https://github.com/rafaelbuosijardim/minha-loja.git)
